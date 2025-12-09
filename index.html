@@ -1,0 +1,241 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Paramedic Coach | AI Study Portal</title>
+    
+    <!-- Google Fonts for Professional Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #0f2c4c; /* EMS Navy Blue */
+            --secondary-blue: #2a6fdb; /* Action Blue */
+            --accent-red: #d32f2f; /* Emergency Red */
+            --bg-light: #f8f9fa;
+            --text-dark: #1a1a1a;
+            --text-gray: #666666;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .brand {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .brand span {
+            color: var(--accent-red);
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            margin-left: 2rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-blue);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, #1e3c63 100%);
+            color: var(--white);
+            padding: 5rem 5%;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            color: #e0e0e0;
+        }
+
+        .cta-button {
+            background-color: var(--accent-red);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            padding: 4rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            border: 1px solid #eee;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .card h3 {
+            color: var(--primary-blue);
+            margin-bottom: 0.5rem;
+        }
+
+        .card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: auto;
+            background-color: var(--white);
+            padding: 2rem 5%;
+            text-align: center;
+            border-top: 1px solid #eee;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-links { display: none; } /* Simplified for mobile */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="brand">
+            The Paramedic <span>Coach</span>
+        </div>
+        <nav class="nav-links">
+            <a href="#">Video Vault</a>
+            <a href="#">Study Tools</a>
+            <a href="#">Community</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Master the NREMT.<br>Anytime, Anywhere.</h1>
+        <p>Your AI Study Coach is available 24/7 to help you understand medical concepts, review scenarios, and build your personalized study plan.</p>
+        <a href="javascript:void(0)" onclick="window.voiceflow.chat.open()" class="cta-button">Start Studying Now</a>
+    </section>
+
+    <!-- Features Grid -->
+    <section class="features">
+        <div class="card">
+            <span class="icon">🚑</span>
+            <h3>NREMT Scenarios</h3>
+            <p>Practice active recall with realistic clinical scenarios designed to test your critical thinking and order of operations.</p>
+        </div>
+        <div class="card">
+            <span class="icon">🩺</span>
+            <h3>Medical Explanations</h3>
+            <p>Get instant, medically accurate answers regarding pathophysiology, pharmacology, and standard protocols.</p>
+        </div>
+        <div class="card">
+            <span class="icon">📚</span>
+            <h3>Course Navigator</h3>
+            <p>Lost in the Video Vault? Ask the AI to find specific modules, worksheets, or videos based on your current study topic.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 The Paramedic Coach. All rights reserved.</p>
+        <p>This AI tool is for educational purposes only.</p>
+    </footer>
+
+    <!-- Voiceflow Chatbot Script -->
+    <script type="text/javascript">
+      (function(d, t) {
+          var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+          v.onload = function() {
+            window.voiceflow.chat.load({
+              verify: { projectID: '6937f7b2e4ebd4a49d27938e' },
+              url: 'https://general-runtime.voiceflow.com',
+              versionID: 'production',
+              voice: {
+                url: "https://runtime-api.voiceflow.com"
+              }
+            });
+          }
+          v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+      })(document, 'script');
+    </script>
+
+</body>
+</html>
